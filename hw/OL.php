@@ -1,35 +1,22 @@
 <?php
 
-class OL
+class OL extends Li
 {
-    protected $text;
-
-    public function __construct()
+   
     {
-        $this->clear();
-    }
-    public function clear(): self
-    {
-        $this->mounth = '';
-        return $this;
-    }
-    public function style(string $style): self
-    {
-        $this->style = "style='$style'";
-        return $this;
-    }
-    public function text(array $text): self
-    {
-        $str = "";
-        foreach ($text as $key => $value) {
-            $str .= "<li>$value</li>";
+        protected $type = "1";
+    
+        public function html()
+        {
+            return "\n<ul type = '$this->type' $this->style id = '$this->id' $this->class>\n$this->data</ul> ";
         }
-        $this->text = $str;
-        return $this;
-    }
-
-    public function HTML()
-    {
-        return "\n<ol>\n$this->text</ol> ";
+    
+        public function setType(string $type)
+        {
+            if (in_array($type, ["square", "circle", "disk"])) {
+                $this->type = $type;
+            }
+            return $this;
+        }
     }
 }

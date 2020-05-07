@@ -1,47 +1,47 @@
 <?php
 include 'autoload.php';
 
-$b = new B;
+// $b = new B;
 
-echo $b
-    ->innerText('Hello World')
-    ->HTML();
+// echo $b
+//     ->innerText('Hello World')
+//     ->HTML();
 
-echo "<br>";
+// echo "<br>";
 
-$i = new I;
-echo $i
-    ->innerText('Hello World')
-    ->HTML();
+// $i = new I;
+// echo $i
+//     ->innerText('Hello World')
+//     ->HTML();
 
-echo "<br>";
+// echo "<br>";
 
-$u = new U;
-echo $u
-    ->innerText('Hello World')
-    ->HTML();
+// $u = new U;
+// echo $u
+//     ->innerText('Hello World')
+//     ->HTML();
 
-echo "<br>";
+// echo "<br>";
 
-$ol = new OL;
-echo $ol
-    ->text([
-        "Январь", "Февраль", "Март",
-        "Апрель", "Май", "Июнь", "Июль",
-        "Август", "Сентябрь"
-    ])
-    ->HTML();
-echo "<br>";
+// $ol = new OL;
+// echo $ol
+//     ->text([
+//         "Январь", "Февраль", "Март",
+//         "Апрель", "Май", "Июнь", "Июль",
+//         "Август", "Сентябрь"
+//     ])
+//     ->HTML();
+// echo "<br>";
 
-$ul = new UL;
-echo $ul
-    ->text([
-        "Январь", "Февраль", "Март",
-        "Апрель", "Май", "Июнь",
-        "Июль", "Август", "Сентябрь"
-    ])
-    ->HTML();
-echo "<br>";
+// $ul = new UL;
+// echo $ul
+//     ->text([
+//         "Январь", "Февраль", "Март",
+//         "Апрель", "Май", "Июнь",
+//         "Июль", "Август", "Сентябрь"
+//     ])
+//     ->HTML();
+// echo "<br>";
 $input = new Input();
 
 echo $input->open(['action' => 'ind.php', 'method' => 'POST']);
@@ -63,7 +63,7 @@ $select = new Select;
 
 $select->arselect(['name' => 'select', 'id' => '']);
 $select->aroption(['value' => '']);
-$select->option(["AAA", "BBB", "CCC","DDD"]);
+$select->option(["AAA", "BBB", "CCC", "DDD"]);
 echo $select->select_();
 
 echo $input->input1(['type' => 'submit', 'value' => 'ok']);
